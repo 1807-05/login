@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jk.mapper.LoginMapper">
+<!-- 登录 -->
+<select id="getUserInfoByLoginNumber" parameterType="com.jk.bean.Login" resultType="com.jk.bean.Login">
+	 select t.id,t.loginacct,t.userpswd
+        from t_user t
+		where t.loginacct = #{value}
+</select>
+</mapper>
